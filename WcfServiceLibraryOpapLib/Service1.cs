@@ -15,6 +15,8 @@ namespace WcfServiceLibraryOpapLib
             return string.Format("You entered: {0}", value);
         }
 
+                
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -27,5 +29,14 @@ namespace WcfServiceLibraryOpapLib
             }
             return composite;
         }
+
+        
+
+        public double Add(double n1, double n2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public string test = "test";
     }
 }

@@ -17,6 +17,13 @@ namespace WcfServiceLibraryOpapLib
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+       
+        [OperationContract]
+        double Add(double n1, double n2);
+
+       
+
+
         // TODO: Add your service operations here
     }
 
@@ -41,5 +48,14 @@ namespace WcfServiceLibraryOpapLib
             get { return stringValue; }
             set { stringValue = value; }
         }
+
+        [DataMember]
+        public string test
+        {
+            get { return test; }
+            set { test = value; }
+        }
+
+
     }
 }

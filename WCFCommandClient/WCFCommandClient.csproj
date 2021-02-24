@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27A79471-4B7A-432D-9806-48E9FB811174}</ProjectGuid>
+    <ProjectGuid>{85E321FE-926A-49D2-A4EC-CDCF486163B4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WcfHostService</RootNamespace>
-    <AssemblyName>WcfHostService</AssemblyName>
+    <RootNamespace>WCFCommandClient</RootNamespace>
+    <AssemblyName>WCFCommandClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -55,7 +55,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Properties\DataSources\WcfServiceLibraryOpapLib.CompositeType.datasource" />
     <None Include="Service References\ServiceReference1\service.wsdl" />
     <None Include="Service References\ServiceReference1\service.xsd">
       <SubType>Designer</SubType>
@@ -63,15 +62,12 @@
     <None Include="Service References\ServiceReference1\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServiceReference1\WCFCommandClient.ServiceReference1.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference1\WcfServiceLibraryOpapLib.xsd">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WcfServiceLibraryOpapLib\WcfServiceLibraryOpapLib.csproj">
-      <Project>{fa12cd86-42fe-4c14-891f-101b6ecfbd1f}</Project>
-      <Name>WcfServiceLibraryOpapLib</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
