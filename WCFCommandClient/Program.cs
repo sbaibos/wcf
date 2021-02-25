@@ -21,7 +21,7 @@ namespace WCFCommandClient
 
           // client.GetOpapData();
 
-            string STR = client.GetOpapData("data");
+            string STR = client.GetOpapData("https://api.opap.gr/draws/v3.0/5104/last/50");
             Console.WriteLine("The string is: {0}", STR);
             Console.WriteLine("All done!");
 

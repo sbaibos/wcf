@@ -7,6 +7,7 @@ using System.Text;
 
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net;
 
 namespace WcfServiceLibraryOpapLib
 {
@@ -43,16 +44,23 @@ namespace WcfServiceLibraryOpapLib
         public string GetOpapData(string data) {
 
             HttpClient client = new HttpClient();
+
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12 | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls;
+
             client.BaseAddress = new Uri("http://localhost/sotos");
             // Add an Accept header for JSON format.    
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             // List all Names.    
           /*  HttpResponseMessage response = client.GetAsync("https://api.opap.gr/draws/v3.0/5104/last/50").Result;*/  // Blocking call!   
-            HttpResponseMessage response = client.GetAsync("http://www.contoso.com/").Result;
+            HttpResponseMessage response = client.GetAsync(data).Result;
             if (response.IsSuccessStatusCode)
             {
                 string products = response.Content.ReadAsStringAsync().Result;
                 return products.Substring(0,1000);
+              
+
+
+
                 Console.WriteLine("response success");
             }
             else
