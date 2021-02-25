@@ -21,7 +21,13 @@ namespace WcfServiceLibraryOpapLib
         [OperationContract]
         double Add(double n1, double n2);
 
-       
+        [OperationContract]
+        string GetOpapData(string data);
+
+        [OperationContract]
+        void Connection();
+
+
 
 
         // TODO: Add your service operations here
@@ -49,12 +55,7 @@ namespace WcfServiceLibraryOpapLib
             set { stringValue = value; }
         }
 
-        [DataMember]
-        public string test
-        {
-            get { return test; }
-            set { test = value; }
-        }
+       
 
 
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="096e4ae1-a1e2-45dd-9989-4b6b6c84f9e0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5bacd6ea-8e9f-4a33-ba22-cf03d1d75904" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,13 +19,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/mex" Protocol="mex" SourceId="1" />
+    <MetadataSource Address="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="bd3db31e-9f59-40a5-a32f-bfd49c5641b2" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1f6d4122-1656-48e4-bbda-353f74adf5a6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="52eccac4-a9f4-4572-b0a4-3cb601196a62" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/mex" />
-    <MetadataFile FileName="WcfServiceLibraryOpapLib.xsd" MetadataType="Schema" ID="e44c658e-c476-4f19-a827-7eae19bbf718" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="a0d1ae65-5a53-4abd-a0b2-bb5a13a2272d" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="95dbe144-0d60-4f1d-9359-29d170728581" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="2dde9bd6-8add-4e2e-aa5d-fc40d1eb1cd1" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/mex" />
+    <MetadataFile FileName="WcfServiceLibraryOpapLib.xsd" MetadataType="Schema" ID="6c061874-8810-4da5-9034-73dde90d6ca4" SourceId="1" SourceUrl="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

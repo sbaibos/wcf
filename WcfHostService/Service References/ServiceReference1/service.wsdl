@@ -19,6 +19,24 @@
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOpapData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpapData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOpapData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpapDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Connection_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connection" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Connection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConnectionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
@@ -27,6 +45,18 @@
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Add" message="tns:IService1_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/AddResponse" message="tns:IService1_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpapData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOpapData" message="tns:IService1_GetOpapData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOpapDataResponse" message="tns:IService1_GetOpapData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Connection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Connection" message="tns:IService1_Connection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ConnectionResponse" message="tns:IService1_Connection_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -49,10 +79,37 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/IService1/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpapData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOpapData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connection">
+      <soap:operation soapAction="http://tempuri.org/IService1/Connection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
-      <soap:address location="http://localhost:8733/Design_Time_Addresses/WcfServiceLibraryOpapLib/Service1/" />
+      <soap:address location="http://localhost:8733/WcfServiceLibraryOpapLib/Service1/" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

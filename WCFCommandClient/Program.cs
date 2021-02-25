@@ -16,9 +16,20 @@ namespace WCFCommandClient
         {
             Service1Client client = new Service1Client();
             Console.WriteLine(client.Endpoint.ToString());
-            Console.WriteLine("test");
+
+        // client.Connection();
+
+          // client.GetOpapData();
+
+            string STR = client.GetOpapData("data");
+            Console.WriteLine("The string is: {0}", STR);
+            Console.WriteLine("All done!");
+
+           
 
             Console.ReadKey();
+
+            client.Close();
           
         }
     }

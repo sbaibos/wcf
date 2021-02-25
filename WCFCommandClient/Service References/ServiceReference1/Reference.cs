@@ -90,17 +90,23 @@ namespace WCFCommandClient.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<WCFCommandClient.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WCFCommandClient.ServiceReference1.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hello", ReplyAction="http://tempuri.org/IService1/helloResponse")]
-        string hello();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/hello", ReplyAction="http://tempuri.org/IService1/helloResponse")]
-        System.Threading.Tasks.Task<string> helloAsync();
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Add", ReplyAction="http://tempuri.org/IService1/AddResponse")]
         double Add(double n1, double n2);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Add", ReplyAction="http://tempuri.org/IService1/AddResponse")]
         System.Threading.Tasks.Task<double> AddAsync(double n1, double n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOpapData", ReplyAction="http://tempuri.org/IService1/GetOpapDataResponse")]
+        string GetOpapData(string data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOpapData", ReplyAction="http://tempuri.org/IService1/GetOpapDataResponse")]
+        System.Threading.Tasks.Task<string> GetOpapDataAsync(string data);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Connection", ReplyAction="http://tempuri.org/IService1/ConnectionResponse")]
+        void Connection();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Connection", ReplyAction="http://tempuri.org/IService1/ConnectionResponse")]
+        System.Threading.Tasks.Task ConnectionAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -146,20 +152,28 @@ namespace WCFCommandClient.ServiceReference1 {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public string hello() {
-            return base.Channel.hello();
-        }
-        
-        public System.Threading.Tasks.Task<string> helloAsync() {
-            return base.Channel.helloAsync();
-        }
-        
         public double Add(double n1, double n2) {
             return base.Channel.Add(n1, n2);
         }
         
         public System.Threading.Tasks.Task<double> AddAsync(double n1, double n2) {
             return base.Channel.AddAsync(n1, n2);
+        }
+        
+        public string GetOpapData(string data) {
+            return base.Channel.GetOpapData(data);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetOpapDataAsync(string data) {
+            return base.Channel.GetOpapDataAsync(data);
+        }
+        
+        public void Connection() {
+            base.Channel.Connection();
+        }
+        
+        public System.Threading.Tasks.Task ConnectionAsync() {
+            return base.Channel.ConnectionAsync();
         }
     }
 }
