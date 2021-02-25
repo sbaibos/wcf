@@ -28,6 +28,12 @@ namespace WCFCommandClient.ServiceReference1 {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string StringValueField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int drawIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int gameIdField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -60,6 +66,32 @@ namespace WCFCommandClient.ServiceReference1 {
                 if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
                     this.StringValueField = value;
                     this.RaisePropertyChanged("StringValue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int drawId {
+            get {
+                return this.drawIdField;
+            }
+            set {
+                if ((this.drawIdField.Equals(value) != true)) {
+                    this.drawIdField = value;
+                    this.RaisePropertyChanged("drawId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int gameId {
+            get {
+                return this.gameIdField;
+            }
+            set {
+                if ((this.gameIdField.Equals(value) != true)) {
+                    this.gameIdField = value;
+                    this.RaisePropertyChanged("gameId");
                 }
             }
         }

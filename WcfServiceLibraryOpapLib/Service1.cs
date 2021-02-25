@@ -61,7 +61,7 @@ namespace WcfServiceLibraryOpapLib
 
 
 
-                Console.WriteLine("response success");
+               
             }
             else
             {

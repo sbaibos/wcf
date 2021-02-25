@@ -55,7 +55,21 @@ namespace WcfServiceLibraryOpapLib
             set { stringValue = value; }
         }
 
-       
+        [DataMember]
+        public int gameId
+        {
+            get { return gameId; }
+            set { gameId = value; }
+        }
+
+        [DataMember]
+        public int drawId
+        {
+            get { return drawId; }
+            set { drawId = value; }
+        }
+
+
 
 
     }

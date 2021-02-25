@@ -4,6 +4,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
       <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="drawId" type="xs:int" />
+      <xs:element minOccurs="0" name="gameId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
